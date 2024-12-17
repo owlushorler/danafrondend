@@ -113,7 +113,7 @@ const SubsidiaryFilter = () => {
 
 
 
-<nav className=" text-xs md:mx-16 mx-4 my-10"> {/* Add horizontal scroll if needed */}  
+<nav className=" text-xs md:mx-16  my-10"> {/* Add horizontal scroll if needed */}  
 <div className="mx-4 w- border-collapse"> {/* Table with minimum width */}  
   <nav>  
     <div className="bg-gray-100 grid grid-cols-4"> {/* Light gray header row */}  
@@ -123,7 +123,7 @@ const SubsidiaryFilter = () => {
       <th className="px-6 py-4"></th> {/* Empty column for button */}  
     </div>  
   </nav>  
-{full &&  <tbody>  
+{full &&  <nav>  
     {User.map((job:{ _id:string, jobTitle:string,company:string, loction:string}) => (  
       <div key  ={job._id} className="border-b items-center grid grid-cols-4 hover:bg-blue-700 border-gray-200"> {/* Border between rows */}  
         <div className="px-6 py-4">{job.jobTitle}</div>  
@@ -131,14 +131,14 @@ const SubsidiaryFilter = () => {
         <div className="px-6 py-4">{job.loction}</div> 
 
         <div className="px-6 py-4 bg-blue-900 text-center hover:bg-blue-900 text-sm text-white hover:cursor-pointer  rounded">  
-          <a  className=" text-center hover:bg-blue-700 text-sm text-white   rounded">View /Apply  
+          <a  className=" text-center hover:bg-blue-700   text-sm text-white   rounded">View /Apply  
           </a>  
         </div>  
       </div>  
     ))}  
 
     
-  </tbody>  }
+  </nav>  }
 
 
   { !full && gen.map((job:{ _id:string, jobTitle:string,company:string, loction:string}) => (  
