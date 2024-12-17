@@ -12,7 +12,7 @@ const [update , setUpdate]=useState(false)
         <a className="text-blue-900 hover:underl
         ine">logo</a>  
     </div>
-    <div onClick={()=>setUpdate((ele)=>ele?false:true)}  className="md:hidden text-2xl cursor-pointer" >
+    <div onClick={()=>setUpdate((ele)=>ele?false:true)}  className="md:hidden  text-2xl cursor-pointer" >
     &equiv;
     </div>
 

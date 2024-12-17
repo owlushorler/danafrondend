@@ -55,7 +55,7 @@ const SubsidiaryFilter = () => {
 
   return (  
     <div className='flex flex-col' >
-    <div className="bg-pink-300 -my-4 shadow-lg flex flex-wrap gap-2 text-sm justify-between align-middle mx-4 md:mx-16 p-4 items-center"> {/* Pink background, padding, aligned items */}  
+    <div className="bg-pink-300 -my-4 shadow-lg flex flex-wrap gap-2 text-sm justify-between align-middle  mx-16 p-4 items-center"> {/* Pink background, padding, aligned items */}  
       <div className="text-gray-700 ">Filter by:</div>  
 
       <select  
@@ -113,7 +113,7 @@ const SubsidiaryFilter = () => {
 
 
 
-<nav className=" text-xs md:mx-16 mx-4 my-10"> {/* Add horizontal scroll if needed */}  
+<nav className=" text-xs mx-16  my-10"> {/* Add horizontal scroll if needed */}  
 <table className="min-w-full border-collapse"> {/* Table with minimum width */}  
   <thead>  
     <tr className="bg-gray-100"> {/* Light gray header row */}  
