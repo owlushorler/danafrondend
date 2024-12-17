@@ -1,6 +1,6 @@
 const JoinOurTeam = () => {  
     return (  
-      <section className="bg-gray-200 p-16 flex items-center justify-between"  > {/* Gray background, padding, flexbox for alignment */}  
+      <section className="bg-gray-200 p-16 flex gap-4 flex-col items-center md:flex md:flex-row justify-between"  > {/* Gray background, padding, flexbox for alignment */}  
         <div>  
           <h2 className="text-3xl font-bold text-blue-900 mb-4">Join Our Team</h2> {/* Blue heading */}  
           <p className=" text-gray-700 mb-4">  

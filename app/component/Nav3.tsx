@@ -55,7 +55,7 @@ const SubsidiaryFilter = () => {
 
   return (  
     <div className='flex flex-col' >
-    <div className="bg-pink-300 -my-4 shadow-lg flex flex-wrap gap-2 text-sm justify-between align-middle  mx-16 p-4 items-center"> {/* Pink background, padding, aligned items */}  
+    <div className="bg-pink-300 -my-4 shadow-lg flex flex-wrap gap-2 text-sm justify-between align-middle mx-4 md:mx-16 p-4 items-center"> {/* Pink background, padding, aligned items */}  
       <div className="text-gray-700 ">Filter by:</div>  
 
       <select  
@@ -113,27 +113,28 @@ const SubsidiaryFilter = () => {
 
 
 
-<nav className=" text-xs mx-16  my-10"> {/* Add horizontal scroll if needed */}  
-<table className="min-w-full border-collapse"> {/* Table with minimum width */}  
-  <thead>  
-    <tr className="bg-gray-100"> {/* Light gray header row */}  
+<nav className=" text-xs md:mx-16 mx-4 my-10"> {/* Add horizontal scroll if needed */}  
+<div className="mx-4 w- border-collapse"> {/* Table with minimum width */}  
+  <nav>  
+    <div className="bg-gray-100 grid grid-cols-4"> {/* Light gray header row */}  
       <th className="px-6 py-4 text-left">Job Title</th>  
       <th className="px-6 py-4 text-left">Company</th>  
       <th className="px-6 py-4 text-left">Location</th>  
       <th className="px-6 py-4"></th> {/* Empty column for button */}  
-    </tr>  
-  </thead>  
+    </div>  
+  </nav>  
 {full &&  <tbody>  
     {User.map((job:{ _id:string, jobTitle:string,company:string, loction:string}) => (  
-      <tr key  ={job._id} className="border-b hover:bg-blue-700 border-gray-200"> {/* Border between rows */}  
-        <td className="px-6 py-4">{job.jobTitle}</td>  
-        <td className="px-6 py-4">{job.company}</td>  
-        <td className="px-6 py-4">{job.loction}</td>  
-        <td className="px-6 py-4 bg-blue-900 text-center hover:bg-blue-900 text-sm text-white hover:cursor-pointer  rounded">  
+      <div key  ={job._id} className="border-b items-center grid grid-cols-4 hover:bg-blue-700 border-gray-200"> {/* Border between rows */}  
+        <div className="px-6 py-4">{job.jobTitle}</div>  
+        <div className="px-6 py-4">{job.company}</div>  
+        <div className="px-6 py-4">{job.loction}</div> 
+
+        <div className="px-6 py-4 bg-blue-900 text-center hover:bg-blue-900 text-sm text-white hover:cursor-pointer  rounded">  
           <a  className=" text-center hover:bg-blue-700 text-sm text-white   rounded">View /Apply  
           </a>  
-        </td>  
-      </tr>  
+        </div>  
+      </div>  
     ))}  
 
     
@@ -141,19 +142,19 @@ const SubsidiaryFilter = () => {
 
 
   { !full && gen.map((job:{ _id:string, jobTitle:string,company:string, loction:string}) => (  
-      <tr key={job._id} className="border-b hover:bg-blue-800 border-gray-200">   
-        <td className="px-6 py-4">{job.jobTitle}</td>  
-        <td className="px-6 py-4">{job.company}</td>  
-        <td className="px-6 py-4">{job.loction}</td>  
-        <td className="px-6 py-4 bg-blue-900 text-center hover:bg-blue-900 text-sm text-white hover:cursor-pointer   rounded">  
+      <div key={job._id} className="border-b grid grid-cols-4 hover:bg-blue-800 border-gray-200">   
+        <div className="px-6 py-4">{job.jobTitle}</div>  
+        <div className="px-6 py-4">{job.company}</div>  
+        <div className="px-6 py-4">{job.loction}</div>  
+        <div className="px-6 py-4 bg-blue-900 text-center hover:bg-blue-900 text-sm text-white hover:cursor-pointer   rounded">  
           <a  className=" text-center hover:bg-blue-700 text-sm text-white   rounded">View /Apply  
           </a>  
-        </td>
+        </div>
          
-      </tr>  
+      </div>  
 
     ))} 
-</table>  
+</div>  
 </nav>
 
 
