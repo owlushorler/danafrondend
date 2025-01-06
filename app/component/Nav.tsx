@@ -9,8 +9,8 @@ const [update , setUpdate]=useState(false)
     <div className=" flex flex-col">
     <nav className="bg-white p-4  flex flex-row px-20 justify-between space-x-8"> {/* White background, padding, horizontal alignment, spacing */}  
     <div>
-        <a className="text-blue-900 hover:underl
-        ine">logo</a>  
+        <a className="text-blue-900 hover:underline">
+          <img className="h-20 w-20" src="https://i.ibb.co/DMVpbNT/DANA-logo-brand.png" alt="DANA-logo-brand"/></a>  
     </div>
     <div onClick={()=>setUpdate((ele)=>ele?false:true)}  className="md:hidden  text-2xl cursor-pointer" >
     &equiv;
